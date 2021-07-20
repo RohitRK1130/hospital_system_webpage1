@@ -1,0 +1,52 @@
+{% load static %}
+<head><style>.split {
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /* Control the right side */
+  .right {
+    right: -50;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translate(-20%, -80%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  </style></head>
+<nav class="navbar navbar-dark navbar-expand-md sticky-top bg-primary">
+    <div class="container-fluid"><img src="{% static 'img/mainicon.png' %}" width="30px" height="30px" alt="10px"><a class="navbar-brand text-center" href="{% url 'homepage' %}"style="margin: 0px 0px;">HOSPITAL SYSTEM</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav text-light ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'homepage' %}">HOME</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'aboutpage' %}">ABOUT</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'loginpage' %}">LOGIN</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'createaccountpage' %}">CREATE ACCOUNT</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'login_admin' %}">ADMIN LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
